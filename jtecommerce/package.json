@@ -1,0 +1,41 @@
+{
+    "name": "jtecommerce",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "tsc && node build/index",
+        "db:create": "docker run --name jtecommerce -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=jtecommerce mysql",
+        "db:start": "docer start jtecommerce"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/linnveig/proyecto-integrador.git"
+    },
+    "devDependencies": {
+        "@types/cors": "^2.8.12",
+        "@types/express": "^4.17.13",
+        "@types/jest": "^27.0.1",
+        "@types/mercadopago": "^1.5.4",
+        "@types/mysql2": "github:types/mysql2",
+        "@typescript-eslint/eslint-plugin": "^4.30.0",
+        "@typescript-eslint/parser": "^4.30.0",
+        "eslint": "^7.32.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-prettier": "^4.0.0",
+        "eslint-plugin-security": "^1.4.0",
+        "jest": "^27.1.0",
+        "prettier": "^2.3.2",
+        "ts-jest": "^27.0.5",
+        "typescript": "^4.4.2"
+    },
+    "dependencies": {
+        "@muzzatech/log": "^0.0.1",
+        "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "mercadopago": "^1.5.8",
+        "mysql2": "^2.3.0"
+    }
+}
